@@ -1,4 +1,4 @@
-MQTT <> Facebook chat bot
+# MQTT <> Facebook chat bot
 
 To get going:
 ```bash

@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "mqtt-chatbot-bridge-executor",
+    "name": "mqtt-chatbot-bridge",
+    "region": "eu-west-2"
+  },
+  "api": {
+    "id": "p7qr4su5yc",
+    "module": "bot"
+  }
+}

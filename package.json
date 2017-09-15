@@ -1,0 +1,26 @@
+{
+  "name": "mqtt-chatbot-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "create": "claudia create --version dev --api-module bot --region eu-west-2",
+    "configure-fb": "claudia update --configure-fb-bot",
+    "configure-iot": "claudia update --configure-iot",
+    "subscribe": "claudia add-iot-topic-rule --sql \"select * , topic() AS topic from 'notify/in/+'\"",
+    "check-logs": "aws logs filter-log-events --log-group /aws/lambda/$npm_package_name --region eu-west-2 ",
+    "deploy": "claudia update"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "claudia": "^2.14.2",
+    "mocha": "^3.5.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.116.0",
+    "claudia-bot-builder": "^2.15.0",
+    "request": "^2.81.0"
+  }
+}

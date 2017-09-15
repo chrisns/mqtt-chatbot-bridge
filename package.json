@@ -21,6 +21,7 @@
   "dependencies": {
     "aws-sdk": "^2.116.0",
     "claudia-bot-builder": "^2.15.0",
+    "mqtt": "^2.13.0",
     "request": "^2.81.0"
   }
 }

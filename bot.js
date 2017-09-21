@@ -15,26 +15,28 @@ const api = builder((request, apiReq) =>
           reject(err)
         resolve(data)
       }))
-    .then(() => true)
+    .then(() => null)
 )
 
 api.intercept(event => {
   if (!event.topic) return event
   return api.interceptImages(event)
     .then(fbReply(api.getRecipientFromMQTT(event), api.generateMessageFromMQTT(event), process.env.facebookAccessToken))
+    .then(response => console.log(response))
     .then(() => false)
 })
 
 api.generateMessageFromMQTT = (event) => {
   if (!event.buttons && !event.image) return event.message
   const message = new fbTemplate.Generic()
-  message.addBubble(event.message)
+  message.addBubble(event.message.substr(0, 80))
   if (event.image) message.addImage(event.image)
   if (event.buttons) {
-    event.buttons.forEach(
+    event.buttons.splice(0, 3).forEach(
       button => message.addButton(button.title, button.value)
     )
   }
+  console.log(JSON.stringify(message.get()))
   return message.get()
 }
 

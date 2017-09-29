@@ -1,5 +1,7 @@
 # MQTT <> Facebook chat bot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisns/mqtt-chatbot-bridge.svg)](https://greenkeeper.io/)
+
 To get going:
 ```bash
 claudia --profile claudia create --version dev --api-module bot --region eu-west-2 --policies AWSIoTDataAccess

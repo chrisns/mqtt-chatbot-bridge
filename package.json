@@ -19,7 +19,7 @@
     "mocha": "^3.5.3"
   },
   "dependencies": {
-    "claudia-bot-builder": "^2.15.2"
+    "claudia-bot-builder": "^4.5.0"
   },
   "optionalDependencies": {
     "aws-sdk": "^2.799.0"

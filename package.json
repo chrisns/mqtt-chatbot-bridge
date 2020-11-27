@@ -22,6 +22,6 @@
     "claudia-bot-builder": "^2.15.2"
   },
   "optionalDependencies": {
-    "aws-sdk": "^2.176.0"
+    "aws-sdk": "^2.799.0"
   }
 }

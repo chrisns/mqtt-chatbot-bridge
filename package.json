@@ -16,7 +16,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "claudia": "^5.13.1",
-    "mocha": "^8.4.0"
+    "mocha": "^9.0.0"
   },
   "dependencies": {
     "claudia-bot-builder": "^4.5.0"
